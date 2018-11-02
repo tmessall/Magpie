@@ -22,3 +22,7 @@
 * My - that is good to have
 * Hi - hello
 * Bye - see you later
+* Food - i do not eat
+* Alive - no i am not alive
+* Question - what is your question, the answer is (answer)
+* Know - no i do not know of that
