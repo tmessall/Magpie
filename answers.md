@@ -7,7 +7,7 @@
 
 # Exercises -
 
-## Three New Keywords (and responses)
+## Three New Keywords (and Responses)
 
 * friend (what are your friends like?)
 * school (how is school going?)
@@ -16,3 +16,7 @@
 ## Multiple Keywords 
 
 Because the reply method for Magpie uses else if statements, the statement that appears higher in the else if chain will be prioritized. For example, if mother appears before cat in the if statements, then the mother response will appear because it is checked for first, even if cat comes before mother in the user input statement.
+
+# Question - 
+
+When keywords are inside of other words, regardless of that word, the response for the keyword is stated by Magpie. When the user says "know", Magpie only sees the "no" within it, which causes problems. To fix it, one could simply put spaces around the keyword in Magpie's checker so it could see the keywords only when they are their own words.
