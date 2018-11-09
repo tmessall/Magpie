@@ -22,6 +22,14 @@ public class StringExplorer {
 
 		// Try other methods here:
 
+		int pos = sample.indexOf("o", 0);
+		int pos1 = sample.indexOf("o", 10);
+		int pos2 = sample.indexOf("o", 15);
+		int pos3 = sample.indexOf("o", 20);
+		System.out.println("sample.indexOf(\"o\") = " + pos);
+		System.out.println("sample.indexOf(\"o\") = " + pos1);
+		System.out.println("sample.indexOf(\"o\") = " + pos2);
+		System.out.println("sample.indexOf(\"o\") = " + pos3);
 	}
 
 }
