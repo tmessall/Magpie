@@ -46,6 +46,10 @@ public class Magpie4 {
 		// Responses which require transformations
 		else if (findKeyword(statement, "I want to", 0) >= 0) {
 			response = transformIWantToStatement(statement);
+		} 
+
+		else if (findKeyword(statement, "I want", 0) >= 0) {
+			response = transformIWantStatement(statement);
 		}
 
 		else {
@@ -80,6 +84,18 @@ public class Magpie4 {
 		int psn = findKeyword(statement, "I want to", 0);
 		String restOfStatement = statement.substring(psn + 9).trim();
 		return "What would it mean to " + restOfStatement + "?";
+	}
+
+	private String transformIWantStatement(String statement) {
+		// Remove the final period, if there is one
+		statement = statement.trim();
+		String lastChar = statement.substring(statement.length() - 1);
+		if (lastChar.equals(".")) {
+			statement = statement.substring(0, statement.length() - 1);
+		}
+		int psn = findKeyword(statement, "I want", 0);
+		String restOfStatement = statement.substring(psn + 6).trim();
+		return "Would you really be happy if you had " + restOfStatement + "?";
 	}
 
 	/**
